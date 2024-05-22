@@ -1,51 +1,55 @@
 import java.util.Scanner;
 class Quiz {
-    public static void conductQuiz(Scanner sc) {
-    
-    System.out.println("WHO WAS THE FOUNDER OF CODSPOT ?");
-    System.out.println("1. STANLY WALCA");
-    System.out.println("2. ELON  MUSK");
-    System.out.println("3.SUNDAR PICHAY");
+    public static void main(String[] args) {
+    System.out.println("YOU SHOULD ANSWER THE QUESTION BEFORE THE GOES UP ");
+    System.out.println("ENTER YOUR NAME");
+    try (Scanner sc = new Scanner(System.in)) {
+        String name = sc.next();
+        System.out.println("HI, "   + name);
+      
+        System.out.println("=======count down begins=======");
+        Thread countdownThread = new Thread(new Runnable() {
+        @Override
+        public void run(){
+            for(int i = 5; i >=0;i--){
+                System.out.print(i + "    ");
+                try{
+                    Thread.sleep(1000);
 
-    char answer = sc.next().charAt(0);
-    switch (answer) {
-        case '1':
-        System.out.println("YES YOU ARE CORRECT DUDE");
-            
-            break;
+                }catch(Exception e){
+                    System.err.println("Error : " + e);
+                }
+            }
+            System.out.println("\n FINISHED");
+        }    
+        });
+        countdownThread.start();
 
-        case '2':
-        System.out.println("SORRY YOU R WRONG BRO");
-            break;
+        System.out.println("WHO WAS THE FOUNDER OF CODSPOT ?");
+        System.out.println("1. STANLY WALCA");
+        System.out.println("2. ELON MUSK");
+        System.out.println("3.SUNDAR PICHAY");
+        char answer = sc.next().charAt(0);
+        switch (answer) {
+            case '1':
+            System.out.println("YES YOU ARE CORRECT DUDE");
+                
+                break;
 
-        case '3':
-        System.out.println("SORRY YOU R WRONG BRO");
-            break;
-    
-        default:
-        System.out.println("USE APPORIATE OPTION");
+            case '2':
+            System.out.println("SORRY YOU R WRONG BRO");
+                break;
 
-            break;
+            case '3':
+            System.out.println("SORRY YOU R WRONG BRO");
+                break;
+        
+            default:
+            System.out.println("USE APPORIATE OPTION");
+
+                break;
+        }
     }
 
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("ENTER YOUR NAME");
-    Scanner scanner = new Scanner(System.in);
-    String name = sc.next();
-    System.out.println("HI, "   + name);
-
-
-
-        long startTime = System.nanoTime();
-         conductQuiz(sc);
-
-         long endTime = System.nanoTime();
-          long executionTime = (endTime - startTime)/1000000000;
-          System.out.println("Time taken: " + executionTime + "ms");
-          sc.close();
     }
 }
-    
-    
