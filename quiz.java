@@ -19,7 +19,7 @@ public class Quiz {
     }
 
     private static void question1(Scanner sc) {
-        System.out.println("Q1. WHO WAS THE FOUNDER OF CODSOFT?");
+        System.out.println("Q1. WHO WAS THE FOUNDER OF CODSOFT?");                ///QUESTION 1
         System.out.println("1. STANLY WALCA");
         System.out.println("2. ELON MUSK");
         System.out.println("3. SUNDAR PICHAI");
@@ -39,7 +39,7 @@ public class Quiz {
     }
 
     private static void question2(Scanner sc) {
-        System.out.println("Q2. CODSOFT WAS ESTABLISHED IN THE YEAR?");
+        System.out.println("Q2. CODSOFT WAS ESTABLISHED IN THE YEAR?");            ///QUESTION 2
         System.out.println("1. 2014");
         System.out.println("2. 2015");
         System.out.println("3. 2016");
@@ -59,7 +59,7 @@ public class Quiz {
     }
 
     private static void question3(Scanner sc) {
-        System.out.println("Q3. JAVA WAS INTRODUCED IN THE YEAR?");
+        System.out.println("Q3. JAVA WAS INTRODUCED IN THE YEAR?");                ///QUESTION3
         System.out.println("1. 1995");
         System.out.println("2. 1996");
         System.out.println("3. 1994");
@@ -79,7 +79,7 @@ public class Quiz {
     }
 
     private static void startTimer() {
-        timeUp = false;
+        timeUp = false;                                                                 ///TIMER 
         timer = new Timer();
         timer.schedule(new TimerTask() {
             public void run() {
