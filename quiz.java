@@ -2,19 +2,19 @@ import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Quiz {
+public class quiz {
     private static Timer timer;
     private static final int TIMEOUT = 5000; // Time in milliseconds
     private static boolean timeUp;
     private static int correctAnswers;
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("WELCOME TO THE QUIZ :)");
-        System.out.println("YOU HAVE ONLY 5 SECS TO ANSWER EACH QUESTION");
-        correctAnswers = 0;
-        question1(sc);
-        sc.close();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("WELCOME TO THE QUIZ :)");
+            System.out.println("YOU HAVE ONLY 5 SECS TO ANSWER EACH QUESTION");
+            correctAnswers = 0;
+            question1(sc);
+        }
         System.out.println("THE ANSWERS YOU HAVE ANSWERED CORRECTLY ARE "+ correctAnswers );
     }
 
