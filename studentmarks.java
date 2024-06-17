@@ -21,10 +21,10 @@ class student_marks {
             int soc = sc.nextInt();
             int  tot = tel + hin + eng + mat + sci + soc;
             int avg = (tot)/6 ;
-            int avg_per = (avg * 100)/600 ;
+            int avg_per = (tot * 100)/600 ;
             System.out.println("YOUR TOTAL MARKS ARE  "+ tot );
             System.out.println("YOUR AVERAGE MARKS ARE  "+ avg);
-            System.out.println("YOUR AVERAGE PERCENTAGE IS " + avg_per);
+            System.out.println("YOUR AVERAGE PERCENTAGE IS " + avg_per + "%");
             if(avg >= 90 && avg <= 100 ){
                 System.out.println(" YOU ARE HAVING A GRADE OF A+");
             }
